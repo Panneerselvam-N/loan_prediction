@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Loan prediction</title>
+        <meta charset="UTF-8">
+        <style>
+           body
+            {
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+              background-size: cover;
+              background-image:url("static/b1.jpg");
+             
+              
+
+             }
+
+            form
+            {
+                color:snow;
+                text-align: center;
+            }
+            h2
+            {
+                color:orangered;
+                text-align: center;
+                
+            }
+ 
+        </style>
+    </head>
+  <body>
+        
+    <form action="" method="POST" class="mb-3">
+
+        <h3>Applicant income in  Rs</h3>
+        <input type="numner" id="income" name=applicantincome /> <br>
+        <h3>Co-applicant income in Rs</h3>
+        <input type="numner" id="coincome" name=coapplicantincome /> <br>
+        <h3>Loan amount in Rs</h3>
+        <input type="numner" id="amount" name=loanamount /> <br>
+        <h3>Credit_history</h3> 
+        <select name="credit_history">
+            <option value="0">Not paid</option>
+            <option value="1">Paid</option>
+            
+          </select> <br>
+
+
+        <h3>No. of people dependent on the applicant</h3> 
+        <select name="dependents">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3+</option>
+        </select> 
+        <br>
+        <h3>Property area</h3> 
+        <select name="area">
+          <option value="property_area_rural">Rural</option>
+          <option value="property_area_semiurban">Semi-urban</option>
+          <option value="property_area_urban">Urban</option>
+        </select> 
+        <br>
+        <h3>Education</h3> 
+        <select name="education">
+          <option value="education_graduate">Graduatel</option>
+          <option value="education_not graduate">Not-Graduate</option>
+        </select> 
+        <br>
+        <h3>Self-Employed</h3> 
+        <select name="self_emp">
+          <option value="self_employed_yes">Yes</option>
+          <option value="self_employed_no">No</option>
+        </select> 
+        <br>
+        <br>
+        
+
+        <input type="submit" value="Predict"/>
+
+    </form>
+
+  
+     <h2>Result : {{ result }}</h2>
+   
+    
+    
+
+
+
+  </body>
+
+
+
+
+
+
+
+
+
+
+
+</html>
